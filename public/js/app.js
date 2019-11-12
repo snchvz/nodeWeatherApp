@@ -1,3 +1,4 @@
+//
 console.log('client side js file loaded');
 
 const weatherForm = document.querySelector('form');
