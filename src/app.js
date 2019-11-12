@@ -21,8 +21,8 @@ app.use(express.static(publicDir));
 
 app.get('', (req,res) => {
     res.render('index', {
-        title: 'weather ',
-        name: "andrew",
+        title: 'Weather ',
+        name: "Andrew S.",
     });
 })
 
@@ -33,8 +33,8 @@ app.get('', (req,res) => {
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title:'About me',
-        name: 'Andrew',
+        title:'About',
+        name: 'Andrew S.',
     });
 });
 
@@ -42,7 +42,7 @@ app.get('/help', (req,res) => {
     res.render('help', {
         msg: 'this is a help message',
         title: 'Help',
-        name: 'Andrew',
+        name: 'Andrew S.',
     });
 });
 

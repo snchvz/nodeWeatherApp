@@ -8,6 +8,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    background-color: paleturquoise;
 }
 
 .main-content {
@@ -15,7 +17,7 @@ body {
 }
 
 footer {
-    color: #888888;
+    color: #4d4d4d;
     border-top: 1px solid #eeeeee;
     margin-top: 16px;
     padding: 16px 0;
@@ -32,9 +34,13 @@ h1 {
 }
 
 header a {
-    color: #888888;
+    color: gray;
     margin-right: 16px;
     text-decoration: none;
+}
+
+header a:hover {
+    color: black;
 }
 
 .portrait {
