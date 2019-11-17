@@ -57,16 +57,17 @@ app.get('/weather', (req,res) => {
     geoCode(req.query.address, (error,data) => {
         if (data)
         {
-            forecast(data.latitude, data.longitude, (error, result) => {
+            forecast(data.latitude, data.longitude, (error, summary, hourly) => {
                 if (error)
                     return res.send({
                         error,
                     });
 
                 res.send({
-                    forecast: result,
+                    forecast: summary,
                     location: data.location,
                     address: req.query.address,
+                    hourly: hourly,
                 });
             });
         }
@@ -75,6 +76,10 @@ app.get('/weather', (req,res) => {
                 error   //same as error: error
             });
     });
+});
+
+app.get('/mylocation', (req,res) => {
+
 });
 
 //NOTE** cannont respond twice from server, only once (i.e. can NOT do res.send() twice in one function call that executes twice)

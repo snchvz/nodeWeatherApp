@@ -14,8 +14,16 @@ const forecast = (lat, long, callback) =>
         }
         else
         {
+            hourlyData = [];
+
+            for(i = 0; i <= 10; i++)
+            {            
+                hourlyData.push({temp: body.hourly.data[i].temperature, wind: body.hourly.data[i].windSpeed})
+                i += 1;
+            }
+
             callback(undefined, body.timezone + '\n' + body.daily.data[0].summary +"\nIt is currently " + body.currently.temperature +
-            ", and there is a " + body.currently.precipProbability + "% chance of rain");
+            ", and there is a " + body.currently.precipProbability + "% chance of rain", hourlyData);
         }
     })
 }
