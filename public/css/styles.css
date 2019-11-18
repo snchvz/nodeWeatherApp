@@ -47,6 +47,17 @@ header a:hover {
     width: 250px;
 }
 
+#rainChance {
+ 
+    float: left;
+    margin-right: 5%;
+    border: black;
+}
+
+#rainIcon {
+    width: 50px;
+}
+
 input {
     border: 1px solid #cccccc;
     padding: 8px;

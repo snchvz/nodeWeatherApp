@@ -18,7 +18,7 @@ const forecast = (lat, long, callback) =>
 
             for(i = 0; i <= 10; i++)
             {            
-                hourlyData.push({temp: body.hourly.data[i].temperature, wind: body.hourly.data[i].windSpeed})
+                hourlyData.push({temp: body.hourly.data[i].temperature, prec: body.hourly.data[i].precipProbability})
                 i += 1;
             }
 

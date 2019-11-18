@@ -78,10 +78,6 @@ app.get('/weather', (req,res) => {
     });
 });
 
-app.get('/mylocation', (req,res) => {
-
-});
-
 //NOTE** cannont respond twice from server, only once (i.e. can NOT do res.send() twice in one function call that executes twice)
 app.get('/products', (req,res) => {
     if (!req.query.search){
